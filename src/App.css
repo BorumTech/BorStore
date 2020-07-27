@@ -2,20 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,3 +24,30 @@
     transform: rotate(360deg);
   }
 }
+
+.App-header {
+	padding: 2em 3em;
+}
+
+.App-header + div > div {
+	text-align: center;
+	border: 1px solid lightgrey;
+	width: calc(33% - 1em - 11px);
+	padding: 1em;
+}
+
+.App-header + div > div img {
+	height: 50px;
+}
+
+
+.row {
+  margin: 0;
+}
+
+footer {
+	clear: both;
+	height: 40px;
+	text-align: center;
+}
+
