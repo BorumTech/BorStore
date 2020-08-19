@@ -1,20 +1,22 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import "animate.css/animate.min.css";
 import {
   Navbar,
   Nav,
-  NavDropdown,
   Form,
   FormControl,
   Button,
 } from "react-bootstrap";
+import ScrollAnimation from 'react-animate-on-scroll';
+import { SocialIcon } from 'react-social-icons';
 
 function Product(props) {
-  const site = "http://" + props.link + ".bforborum.com/";
+  const site = "http://" + (props.link ?? props.id) + ".bforborum.com/";
   const imgSrc = props.img ?? "images/icon.png";
   return (
-    <div id={props.id ?? props.link} className="col-sm-4">
+    <div id={props.id} className="col-sm-4">
       <a target="_blank" rel="noopener noreferrer" href={site}>
         <img src={site + imgSrc} alt={props.name + "logo"}/>
         <span>{props.name}</span>
@@ -25,24 +27,27 @@ function Product(props) {
 
 /**
   * Set key of each Product component in context of productList array
-
   * Set respectives properties of element in array to Product element
-
   * Display all Products in a Bootstrap row
 */
 function ProductList(props) {
-    const listItems = props.productList.map((el) => {
-      return <Product id={el.id} link={el.link} img={el.img} name={el.name} key={el.id} />
+    const listItems = props.productList.map(el => {
+      return <Product key={el.id} id={el.id} link={el.link} img={el.img} name={el.name} />
     });
     
     return (
-      <div className="row">{listItems}</div>
+      <div className="row" id="products">{listItems}</div>
     );
 }
 
 function Mission() {
   return (
-    <div></div>
+    <ScrollAnimation animateIn="fadeIn">
+      <div id="mission">
+        <h1>Our Mission</h1>
+        <h2>Provide free internet privacy through innovation that fights Big Tech</h2>
+      </div>
+    </ScrollAnimation>
   );
 }
 
@@ -104,6 +109,8 @@ class App extends React.Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
+                <Nav.Link href="#products">Products</Nav.Link>
+                <Nav.Link href="#mission">Mission</Nav.Link>
                 <Nav.Link target="_blank" rel="noopener noreferrer" href="http://blog.bforborum.com">Blog</Nav.Link>
                 {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -123,7 +130,11 @@ class App extends React.Component {
         <ProductList productList={this.state.productList} />
         <Mission />
         <footer>
-          <p>&copy; 2020 Borum Inc.</p>
+          <div className="social-icons">
+            <SocialIcon url="http://twitter.com/VarunS924" />
+            <SocialIcon url="https://www.youtube.com/channel/UCDDyVIflz8dUhHIb2YmA9hQ" />
+          </div>
+          <p className="copyright">&copy; 2020 Borum Inc.</p>
         </footer>
       </div>
     );
