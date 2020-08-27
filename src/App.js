@@ -131,7 +131,7 @@ class App extends React.Component {
         <Mission />
         <footer>
           <div className="social-icons">
-            <SocialIcon url="http://twitter.com/VarunS924" />
+            <SocialIcon url="http://twitter.com/BorumTech" />
             <SocialIcon url="https://www.youtube.com/channel/UCDDyVIflz8dUhHIb2YmA9hQ" />
           </div>
           <p className="copyright">&copy; 2020 Borum Inc.</p>
