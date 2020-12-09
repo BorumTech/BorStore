@@ -59,15 +59,14 @@ class App extends React.Component {
     this.handleKeyUp = this.handleKeyUp.bind(this);
 
     this.productList = [
-      {id: "q-a", link: "www", img: "staticassets/images/icon.png", name: "Borum Q&A"},
+      {id: "q-a", link: "forum", name: "Borum Q&A"},
       {link: "farms", img: "icon.jpg", name: "Borum Farms"},
       {id: "flytrap", link: "audio", name: "Flytrap"},
       {link: "paint", img: "paint-pallete.png", name: "Borum Paint"},
-      {id: "chatfish", link: "chat", name: "Chatfish"},
-      {id: "jottings", link: "jot", name: "Borum Jot"},
+      //{id: "chatfish", link: "chat", name: "Chatfish"},
+      {id: "jottings", img: "images/favicon/icon.png", link: "jot", name: "Borum Jot"},
       {link: "feasts", img: "images/pizza.jpg", name: "Borum Feasts"},
       {link: "svjournal", img: "images/SVJIcon.ico", name: "The Silicon Valley Journal"},
-      {link: "news", img: "icon.png", name: "Borum News"},
       {link: "weather", img: "public/icon.png", name: "Borum Weather"},
       {link: "restaurants", img: "favicon.ico", name: "Borum Restaraunts"},
       {link: "memusic", img: "images/icon.jpg", name: "Me Music"}
@@ -131,7 +130,6 @@ class App extends React.Component {
         <Mission />
         <footer>
           <div className="social-icons">
-            <SocialIcon url="http://twitter.com/BorumTech" />
             <SocialIcon url="https://www.youtube.com/channel/UCDDyVIflz8dUhHIb2YmA9hQ" />
           </div>
           <p className="copyright">&copy; 2020 Borum Inc.</p>
