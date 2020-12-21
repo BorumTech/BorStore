@@ -18,7 +18,7 @@ function Product(props) {
   return (
     <div id={props.id} className="col-sm-4">
       <a target="_blank" rel="noopener noreferrer" href={site}>
-        <img src={site + imgSrc} alt={props.name + "logo"}/>
+        <img src={"/" + imgSrc} alt={props.name + "logo"}/>
         <span>{props.name}</span>
       </a>
     </div>
@@ -59,17 +59,15 @@ class App extends React.Component {
     this.handleKeyUp = this.handleKeyUp.bind(this);
 
     this.productList = [
-      {id: "q-a", link: "forum", name: "Borum Q&A"},
-      {link: "farms", img: "icon.jpg", name: "Borum Farms"},
-      {id: "flytrap", link: "audio", name: "Flytrap"},
+      {id: "q-a", link: "forum", img: "logo512.png", name: "Borum Q&A"},
+      {link: "farms", img: "farms.jpg", name: "Borum Farms"},
+      {id: "flytrap", link: "audio", img:"flytrap.png", name: "Flytrap"},
       {link: "paint", img: "paint-pallete.png", name: "Borum Paint"},
       //{id: "chatfish", link: "chat", name: "Chatfish"},
-      {id: "jottings", img: "images/favicon/icon.png", link: "jot", name: "Borum Jot"},
-      {link: "feasts", img: "images/pizza.jpg", name: "Borum Feasts"},
-      {link: "svjournal", img: "images/SVJIcon.ico", name: "The Silicon Valley Journal"},
-      {link: "weather", img: "public/icon.png", name: "Borum Weather"},
+      {id: "jottings", img: "jot.png", link: "jot", name: "Borum Jot"},
+      {link: "feasts", img: "pizza.jpg", name: "Borum Feasts"},
+      {link: "svjournal", img: "SVJIcon.jpg", name: "The Silicon Valley Journal"},
       {link: "restaurants", img: "favicon.ico", name: "Borum Restaraunts"},
-      {link: "memusic", img: "images/icon.jpg", name: "Me Music"}
       // <Product id="q-a" link="www" img="staticassets/images/icon.png" name="Borum Q&A" />,
       // <Product link="farms" img="icon.jpg" name="Borum Farms" />,
       // <Product id="flytrap" link="audio" name="Flytrap" />,
