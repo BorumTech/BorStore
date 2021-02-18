@@ -132,7 +132,7 @@ class App extends React.Component {
 			},
 			{
 				link: "accounts",
-				img: "accounts.png",
+				img: "sphere.svg",
 				name: "Borum Sphere",
 				released: false
 			}
