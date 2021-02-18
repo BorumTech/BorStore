@@ -117,13 +117,25 @@ class App extends React.Component {
 				img: "classroom.png",
 				name: "Borum Classroom",
 				released: false,
-      },
-      {
-        link: "developer",
-        img: "favicon.ico",
-        name: "Borum Developer",
-        released: true
-      }
+			},
+			{
+				link: "developer",
+				img: "favicon.ico",
+				name: "Borum Developer",
+				released: true,
+			},
+			{
+				link: "archives",
+				img: "archives.png",
+				name: "Borum Archives",
+				released: true
+			},
+			{
+				link: "accounts",
+				img: "accounts.png",
+				name: "Borum Sphere",
+				released: false
+			}
 		];
 
 		this.state = {
@@ -139,11 +151,11 @@ class App extends React.Component {
 	searchStore(e) {
 		const query = e.target.previousSibling.value;
 		this.setState({
-			launchedProductList: this.productList.filter(p =>
-				p.name.includes(query) && p.released
+			launchedProductList: this.productList.filter(
+				p => p.name.includes(query) && p.released
 			),
-			futureProductList: this.productList.filter(p =>
-				p.name.includes(query) && !p.released
+			futureProductList: this.productList.filter(
+				p => p.name.includes(query) && !p.released
 			),
 		});
 	}
