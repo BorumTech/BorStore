@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Product(props) {
-    const site = "http://" + (props.link ?? props.id) + ".bforborum.com/";
+    const site = "https://" + (props.link ?? props.id) + ".bforborum.com/";
     const imgSrc = props.img ?? "images/icon.png";
     return (
       <div id={props.id} className="col-sm-4">
