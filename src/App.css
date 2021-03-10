@@ -30,6 +30,10 @@ html {
   }
 }
 
+#sphere {
+  margin-left: 20px;
+}
+
 .form-inline {
   justify-content: center;
 }
@@ -46,7 +50,6 @@ html {
 }
 
 #mission {
-  background-image: url('https://cdn18.picryl.com/photo/2019/11/04/group-photo-of-watson-machine-employees-man-wearing-bowtie-in-center-of-front-9d5813-640.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 500px;
@@ -60,7 +63,7 @@ html {
 
 #mission h2 {
   margin-top: 3%;
-  color: white;
+  color: black;
 }
 
 .row {

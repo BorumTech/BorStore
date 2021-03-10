@@ -38,8 +38,8 @@ function Mission() {
 			<div id="mission">
 				<h1>Our Mission</h1>
 				<h2>
-					Provide free internet privacy through innovation that fights
-					Big Tech
+					Provide internet privacy through innovation that fights Big
+					Tech
 				</h2>
 			</div>
 		</ScrollAnimation>
@@ -128,14 +128,8 @@ class App extends React.Component {
 				link: "archives",
 				img: "archives.png",
 				name: "Borum Archives",
-				released: true
+				released: true,
 			},
-			{
-				link: "accounts",
-				img: "sphere.svg",
-				name: "Borum Sphere",
-				released: false
-			}
 		];
 
 		this.state = {
@@ -174,6 +168,7 @@ class App extends React.Component {
 								<Nav.Link href="mailto:support@bforborum.com">
 									Support
 								</Nav.Link>
+								
 								{/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -196,6 +191,19 @@ class App extends React.Component {
 									Search
 								</Button>
 							</Form>
+							<div id="sphere">
+									<a
+										target="_blank"
+										rel="noopener noreferrer"
+										href="https://accounts.bforborum.com"
+									>
+										<img
+											src="/sphere.svg"
+											alt="borum sphere logo"
+											height="50"
+										/>
+									</a>
+								</div>
 						</Navbar.Collapse>
 					</Navbar>
 				</header>
@@ -208,7 +216,7 @@ class App extends React.Component {
 					<div className="social-icons">
 						<SocialIcon url="https://www.youtube.com/channel/UCDDyVIflz8dUhHIb2YmA9hQ" />
 					</div>
-					<p className="copyright">&copy; 2020 Borum Inc.</p>
+					<p className="copyright">&copy; 2021 Borum Inc.</p>
 				</footer>
 			</div>
 		);
