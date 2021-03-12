@@ -107,12 +107,6 @@ class App extends React.Component {
 				released: true,
 			},
 			{
-				link: "restaurants",
-				img: "restaurants.ico",
-				name: "Borum Restaraunts",
-				released: true,
-			},
-			{
 				link: "classroom",
 				img: "classroom.png",
 				name: "Borum Classroom",
