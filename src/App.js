@@ -159,7 +159,7 @@ class App extends React.Component {
 							<Nav className="mr-auto">
 								<Nav.Link href="#products">Products</Nav.Link>
 								<Nav.Link href="#mission">Mission</Nav.Link>
-								<Nav.Link href="mailto:support@bforborum.com">
+								<Nav.Link href="mailto:support@borumtech.com">
 									Support
 								</Nav.Link>
 								
@@ -189,7 +189,7 @@ class App extends React.Component {
 									<a
 										target="_blank"
 										rel="noopener noreferrer"
-										href="https://accounts.bforborum.com"
+										href="https://accounts.borumtech.com"
 									>
 										<img
 											src="/sphere.svg"
