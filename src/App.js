@@ -101,7 +101,7 @@ class App extends React.Component {
 				released: true,
 			},
 			{
-				link: "svjournal",
+				link: "thesiliconvalleyjournal",
 				img: "SVJIcon.jpg",
 				name: "The Silicon Valley Journal",
 				released: true,
@@ -109,7 +109,7 @@ class App extends React.Component {
 			{
 				link: "classroom",
 				img: "classroom.png",
-				name: "Borum Classroom",
+				name: "Greenboard",
 				released: false,
 			},
 			{
@@ -122,7 +122,7 @@ class App extends React.Component {
 				link: "archives",
 				img: "archives.png",
 				name: "Borum Archives",
-				released: true,
+				released: false,
 			},
 		];
 
