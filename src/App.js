@@ -95,12 +95,6 @@ class App extends React.Component {
 				released: true,
 			},
 			{
-				link: "feasts",
-				img: "pizza.jpg",
-				name: "Borum Feasts",
-				released: true,
-			},
-			{
 				link: "thesiliconvalleyjournal",
 				img: "SVJIcon.jpg",
 				name: "The Silicon Valley Journal",
@@ -113,17 +107,34 @@ class App extends React.Component {
 				released: false,
 			},
 			{
+				link: "tally.classroom",
+				img: "classroom.png",
+				name: "Greenboard Tally",
+				released: false
+			},
+			{
+				link: "assess.classroom",
+				img: "classroom.png",
+				name: "Greenboard Assess",
+				released: false
+			},
+			{
+				link: "math.classroom",
+				img: "classroom.png",
+				name: "Greenboard Math",
+				released: false
+			},
+			{
 				link: "developer",
 				img: "favicon.ico",
 				name: "Borum Developer",
 				released: true,
 			},
 			{
-				link: "archives",
-				img: "archives.png",
-				name: "Borum Archives",
-				released: false,
-			},
+				link: "calendar",
+				name: "Borum Calendar",
+				released: false
+			}
 		];
 
 		this.state = {
