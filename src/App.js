@@ -107,19 +107,19 @@ class App extends React.Component {
 				released: false,
 			},
 			{
-				link: "tally.classroom",
+				link: "classroom",
 				img: "classroom.png",
 				name: "Greenboard Tally",
 				released: false
 			},
 			{
-				link: "assess.classroom",
+				link: "classroom",
 				img: "classroom.png",
 				name: "Greenboard Assess",
 				released: false
 			},
 			{
-				link: "math.classroom",
+				link: "classroom",
 				img: "classroom.png",
 				name: "Greenboard Math",
 				released: false
