@@ -132,6 +132,7 @@ class App extends React.Component {
 			},
 			{
 				link: "calendar",
+				img: "calendar.png",
 				name: "Borum Calendar",
 				released: false
 			}
