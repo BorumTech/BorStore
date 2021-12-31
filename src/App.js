@@ -219,10 +219,12 @@ class App extends React.Component {
 				<ProductList productList={this.state.futureProductList} />
 				<Mission />
 				<footer>
+					<p className="copyright">&copy; 2021-{new Date().getFullYear()} Borum Tech. All rights reserved.</p>
 					<div className="social-icons">
-						<SocialIcon url="https://www.youtube.com/channel/UCDDyVIflz8dUhHIb2YmA9hQ" />
+						<SocialIcon target="_blank" rel="noreferrer noopener" url="https://www.youtube.com/channel/UCDDyVIflz8dUhHIb2YmA9hQ" />
+						<SocialIcon target="_blank" rel="noreferrer noopener" url="https://twitter.com/BorumTech" />
+						<SocialIcon target="_blank" rel="noreferrer noopener" url="https://github.com/BorumTech/BorStore" />
 					</div>
-					<p className="copyright">&copy; 2021 Borum Inc.</p>
 				</footer>
 			</div>
 		);

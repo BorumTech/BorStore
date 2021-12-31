@@ -72,17 +72,16 @@ html {
 
 footer {
 	clear: both;
-  display: grid;
-  grid-template-columns: 15% 60% auto;
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-between;
   margin: 0 2em;
+  padding: 1em 0;
+  border-top: 1px solid black;
 }
 
 footer .social-icons {
   grid-column: 1 / -1;
-  grid-row: 1 2;
   justify-self: stretch;
-  border-bottom: 1px solid black;
 }
 
 footer .social-icon {
@@ -91,7 +90,6 @@ footer .social-icon {
 
 footer .copyright {
   grid-column: 1 / -1;
-  grid-row: 2;
   justify-self: center;
   align-self: flex-end;
 }
