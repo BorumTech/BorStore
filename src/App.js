@@ -38,7 +38,7 @@ function Mission() {
 			<div id="mission">
 				<h1>Our Mission</h1>
 				<h2>
-					Increase your knowledge and productivity in the easiest way possible 
+					Increase your knowledge and productivity in the simplest way possible 
 				</h2>
 			</div>
 		</ScrollAnimation>
