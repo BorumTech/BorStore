@@ -38,8 +38,7 @@ function Mission() {
 			<div id="mission">
 				<h1>Our Mission</h1>
 				<h2>
-					Provide internet privacy through innovation that fights Big
-					Tech
+					Increase your knowledge and productivity in the easiest way possible 
 				</h2>
 			</div>
 		</ScrollAnimation>
@@ -55,17 +54,11 @@ class App extends React.Component {
 
 		this.productList = [
 			{
-				id: "q-a",
+				id: "forum",
 				link: "forum",
 				img: "logo512.png",
-				name: "Borum Q&A",
+				name: "Borum Forum",
 				released: true,
-			},
-			{
-				link: "farms",
-				img: "farms.jpg",
-				name: "Farm Attack",
-				released: false,
 			},
 			{
 				id: "flytrap",
@@ -79,13 +72,6 @@ class App extends React.Component {
 				img: "paint-pallete.png",
 				name: "Borum Paint",
 				released: true,
-			},
-			{
-				id: "chatfish",
-				link: "chat",
-				img: "chatfish.png",
-				name: "Chatfish",
-				released: false,
 			},
 			{
 				id: "jottings",
