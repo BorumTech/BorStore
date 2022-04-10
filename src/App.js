@@ -4,32 +4,6 @@ import React from "react";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
 import "./App.css";
-import Product from "./Product";
-
-/**
- * Set key of each Product component in context of productList array
- * Set respectives properties of element in array to Product element
- * Display all Products in a Bootstrap row
- */
-function ProductList(props) {
-	const listItems = props.productList.map(el => {
-		return (
-			<Product
-				key={el.id}
-				id={el.id}
-				link={el.link}
-				img={el.img}
-				name={el.name}
-			/>
-		);
-	});
-
-	return (
-		<div className="row" id="products">
-			{listItems}
-		</div>
-	);
-}
 
 function Mission() {
 	return (
