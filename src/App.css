@@ -1,69 +1,117 @@
 html {
   scroll-behavior: smooth;
+  --color-primary: #17304a;
+  --color-secondary: #174a42;
+  --color-tertiary: #20174a;
 }
 
-.App {
-  text-align: center;
+.btn.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--color-tertiary);
+  border-color: var(--color-tertiary);
+  transition: 0.5s;
 }
 
 .App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 2em 3em;
+  background-color: var(--color-primary);
+  padding: 1em 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-custom .navbar-brand img {
+  margin-right: 5px;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  color: white;
+}
+
+.nav-item.dropdown:hover .dropdown-menu, .dropdown-menu:hover {
+  display: block;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-#sphere {
-  margin-left: 20px;
+.account-control {
+  float: right;
+}
+
+.account-control a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  margin: 0 0.5em;
+  padding: 0.5em;
+}
+
+.account-control img {
+  height: 30px;
 }
 
 .form-inline {
   justify-content: center;
 }
 
-#products > div {
-	text-align: center;
-	border: 1px solid lightgrey;
-	width: calc(33% - 1em - 11px);
-	padding: 1em;
-}
-
-#products > div img {
-  height: 50px;
-}
-
 #mission {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 500px;
+  background-color: var(--color-secondary);
+  background-image: url("/hero-mission-11.png");
+  background-size: contain;
+  text-align: center;
+  padding: 1em 0;
+  color: white;
 }
 
 #mission h1 {
-  padding-top: 5%;
-  padding-left: 20%;
-  text-align: left;
+  font-size: 3em;
+  margin-bottom: 100px;
 }
 
-#mission h2 {
-  margin-top: 3%;
-  color: black;
+#showcase {
+  margin: 4em;
+}
+
+#showcase img {
+  display: block;
+  margin: 0 auto;
+  height: 400px;
+}
+
+#newsletter {
+  margin: 3em;
+  display: grid;
+  grid-column: 1fr 1fr;
+  text-align: center;
+}
+
+#newsletter img {
+  justify-self: center;
+  grid-column: 1;
+}
+
+#newsletter > :not(img) {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#newsletter a {
+  padding: 1em 2em;
+  color: white;
+  text-decoration: none;
+  width: 300px;
 }
 
 .row {
@@ -71,7 +119,7 @@ html {
 }
 
 footer {
-	clear: both;
+  clear: both;
   display: flex;
   justify-content: space-between;
   margin: 0 2em;
@@ -93,4 +141,3 @@ footer .copyright {
   justify-self: center;
   align-self: flex-end;
 }
-

@@ -1,10 +1,9 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 import "animate.css/animate.min.css";
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
-import ScrollAnimation from "react-animate-on-scroll";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
+import "./App.css";
 import Product from "./Product";
 
 /**
@@ -34,14 +33,13 @@ function ProductList(props) {
 
 function Mission() {
 	return (
-		<ScrollAnimation animateIn="fadeIn">
-			<div id="mission">
-				<h1>Our Mission</h1>
-				<h2>
-					Increase your knowledge and productivity in the simplest way possible 
-				</h2>
+		<section id="mission">
+			<div className="container">
+				<h1>Borum Suite</h1>
+
+				<h2>Increasing knowledge, productivity, and well-being in a vast ecosystem of high-quality tools</h2>
 			</div>
-		</ScrollAnimation>
+		</section>
 	);
 }
 
@@ -150,26 +148,30 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<header className="App-header">
-					<Navbar fixed="top" bg="light" expand="md">
-						<Navbar.Brand href="/">Borum Technologies</Navbar.Brand>
+					<Navbar expand="md" variant="dark" className="navbar-custom">
+						<Navbar.Brand href="/"><img src="/logo512.png" alt="Letter B - Borum Logo" height="40" />Borum Technologies</Navbar.Brand>
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Collapse id="basic-navbar-nav">
 							<Nav className="mr-auto">
-								<Nav.Link href="#products">Products</Nav.Link>
-								<Nav.Link href="#mission">Mission</Nav.Link>
-								<Nav.Link href="mailto:support@borumtech.com">
-									Support
-								</Nav.Link>
-								
-								{/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                </NavDropdown> */}
+								<NavDropdown title="Products" id="products-dropdown" renderMenuOnMount={true}>
+									<NavDropdown.Item href="#action/3.1">Flytrap</NavDropdown.Item>
+									<NavDropdown.Item href="#action/3.2">Borum Jot</NavDropdown.Item>
+									<NavDropdown.Item href="#action/3.3">Borum Forum</NavDropdown.Item>
+									<NavDropdown.Item href="#action/3.4">The Silicon Valley Journal</NavDropdown.Item>
+									<NavDropdown.Divider />
+									<NavDropdown.Item href="#action/3.5">Greenboard</NavDropdown.Item>
+									<NavDropdown.Item href="#action/3.6">HealthHive</NavDropdown.Item>
+									<NavDropdown.Item href="#action/3.7">Borum Calendar</NavDropdown.Item>
+									<NavDropdown.Item href="#action/3.8">Bhone</NavDropdown.Item>
+								</NavDropdown>
+								<NavDropdown title="Resources" renderMenuOnMount={true}>
+									<NavDropdown.Item href="https://developer.borumtech.com" target="_blank">Developer API</NavDropdown.Item>
+								</NavDropdown>
+								<NavDropdown title="Open Source" id="open-source-dropdown" renderMenuOnMount={true}>
+									<NavDropdown.Item href="/open-source/php-sleep">PHP Sleep</NavDropdown.Item>
+								</NavDropdown>
 							</Nav>
-							<Form inline>
+							{/* <Form inline>
 								<FormControl
 									onKeyUp={this.handleKeyUp}
 									type="text"
@@ -182,30 +184,51 @@ class App extends React.Component {
 								>
 									Search
 								</Button>
-							</Form>
-							<div id="sphere">
-									<a
-										target="_blank"
-										rel="noopener noreferrer"
-										href="https://accounts.borumtech.com"
-									>
-										<img
-											src="/sphere.svg"
-											alt="borum sphere logo"
-											height="50"
-										/>
-									</a>
-								</div>
+							</Form> */}
 						</Navbar.Collapse>
+						<div className="account-control">
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://accounts.borumtech.com/signup"
+							>
+								{/* <img
+										src="/sphere.svg"
+										alt="borum sphere logo"
+										height="50"
+									/> */}
+								Get Started
+							</a>
+						</div>
 					</Navbar>
 				</header>
-				<h1>Current Products</h1>
-				<ProductList productList={this.state.launchedProductList} />
-				<h1>Coming Soon</h1>
-				<ProductList productList={this.state.futureProductList} />
-				<Mission />
+				<main>
+					<Mission />
+					<section className="container" id="showcase">
+						<div className="row">
+							<div className="col-md-6">
+								<h2>To-do lists and sticky notes are dead</h2>
+								<p>Accelerate your producitivity with Borum Jot, an encrypted note and task management app</p>
+								<a href="/products/borum-jot" className="btn btn-primary">Learn More</a>
+							</div>
+							<div className="col-md-6">
+								<img src="/borumjotdemo.gif" alt="borum jot demo" />
+							</div>
+						</div>
+					</section>
+					<section className="container" id="newsletter">
+						<img src="newsletter.webp" alt="" height="250" />
+						<article>
+							<h2>Love innovation</h2>
+							<p>Stay up to date with Borum Technologies</p>
+							<a className="btn btn-primary" href="https://borum-tech.noticeable.news/subscriptions" target="_blank" rel="noopener noreferrer">Sign Up for our Newsletter</a>
+						</article>
+					</section>
+				</main>
+
 				<footer>
 					<p className="copyright">&copy; 2021-{new Date().getFullYear()} Borum Tech. All rights reserved.</p>
+					<a href="https://status.borumtech.com">Status</a>
 					<div className="social-icons">
 						<SocialIcon target="_blank" rel="noreferrer noopener" url="https://www.youtube.com/channel/UCDDyVIflz8dUhHIb2YmA9hQ" />
 						<SocialIcon target="_blank" rel="noreferrer noopener" url="https://twitter.com/BorumTech" />
